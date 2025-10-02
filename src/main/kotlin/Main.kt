@@ -1,3 +1,6 @@
+import kotlin.math.abs
+import kotlin.math.hypot
+
 fun main() {
 
 }
@@ -58,9 +61,13 @@ fun var11z2(x: Double, y: Double): Boolean = TODO()
 fun var11z3(x: Double) : Double = TODO()
 
 // Варіант 12
-fun var12z2(x: Double, y: Double): Boolean = TODO()
+fun var12z2(x: Double, y: Double) = (y>=0 && hypot(x,y) <= 2) || (y<=0 && y >= -1 && abs(x) <= 2)
 
-fun var12z3(x: Double) : Double = TODO()
+fun var12z3(x: Double) : Double = when {
+    x <= 1 -> 2 - abs(x)
+    x <= 2 -> 1.0
+    else -> 2 * x -3
+}
 
 // Варіант 13
 fun var13z2(x: Double, y: Double): Boolean = TODO()
